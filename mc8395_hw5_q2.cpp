@@ -8,7 +8,6 @@ int main() {
     int userGuess;
     int remainingGuesses;
     bool hasGuessedNum;
-
     srand(time(0));
     randomNum = rand() % 100;
     cout<<"I thought of a number between 1 and 100! Try to guess it."<<endl;
