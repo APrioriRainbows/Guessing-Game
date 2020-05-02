@@ -8,7 +8,9 @@ int main() {
     int userGuess;
     int remainingGuesses;
     bool hasGuessedNum;
+    //seed random number
     srand(time(0));
+    //create random number
     randomNum = rand() % 100;
     cout<<"I thought of a number between 1 and 100! Try to guess it."<<endl;
     minRange = 1;
@@ -16,7 +18,6 @@ int main() {
     remainingGuesses = 5;
     hasGuessedNum = false;
    while(remainingGuesses > 0 && hasGuessedNum == false) {
-       cout<<endl;
        cout << "Range:[" << minRange << "-" << maxRange << "], Number of guesses left: " << remainingGuesses<< endl;
        cout << "Your guess: ";
        cin >> userGuess;
@@ -25,10 +26,12 @@ int main() {
                minRange = userGuess + 1;
                cout << "Wrong! My number is bigger."<<endl;
                remainingGuesses--;
+               cout<<"\n"
            } else if (userGuess > randomNum) {
                maxRange = userGuess - 1 ;
                cout << "Wrong! My number is smaller." << endl;
                remainingGuesses--;
+               cout<<"\n"
            } else if (userGuess == randomNum) {
                cout << "Congrats! You guessed my number in " << remainingGuesses << " guesses!";
                hasGuessedNum = true;
