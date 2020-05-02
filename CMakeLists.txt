@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(hw5 mc8395_hw5_q1.cpp)
 add_executable(mc8395_hw5_q1 mc8395_hw5_q1.cpp)
+add_executable(mc8395_hw5_q2 mc8395_hw5_q2.cpp)
